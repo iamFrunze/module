@@ -16,6 +16,7 @@ class LightThemeData extends AppTheme {
       brightness: Brightness.light,
       appBarTheme: buildAppBarTheme(),
       elevatedButtonTheme: buildElevatedButtonTheme(),
+
     );
   }
 

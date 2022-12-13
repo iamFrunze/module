@@ -1,5 +1,9 @@
 {
   "appTitle": "Module",
   "createNewProject": "Create new project",
-  "filter": "Filter"
+  "filter": "Filter",
+  "sort": {
+    "firstNew": "By date newest first",
+    "firstOld": "By date old first"
+  }
 }
