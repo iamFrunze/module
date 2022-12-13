@@ -1,5 +1,12 @@
 {
   "appTitle": "Модуль",
   "createNewProject": "Создать новый проект",
-  "filter": "Фильтр"
+  "filter": "Фильтр",
+  "sort": {
+    "firstNew": "По дате сначала новые",
+    "firstOld": "По дате сначала старые"
+  },
+  "contract": "Договор № {}",
+  "crm": "CRM {}"
+
 }
