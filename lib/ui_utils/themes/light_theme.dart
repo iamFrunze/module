@@ -4,7 +4,6 @@ import 'package:module/ui_utils/app_colors.dart';
 import 'package:module/ui_utils/app_typography.dart';
 import 'package:module/ui_utils/themes/themes.dart';
 
-
 class LightThemeData extends AppTheme {
   static ThemeData get _base => ThemeData.light();
 
@@ -42,6 +41,7 @@ class LightThemeData extends AppTheme {
       titleMedium: AppTypography.lmTitleMedium,
       titleSmall: AppTypography.lmTitleSmall,
       bodyMedium: AppTypography.lmBodyMedium,
+      labelMedium: AppTypography.lmLabelMedium,
     );
   }
 

@@ -19,5 +19,11 @@ abstract class  LocaleKeys {
   static const purposeBuildingClasses_other_class = 'purposeBuildingClasses.other_class';
   static const purposeBuildingClasses = 'purposeBuildingClasses';
   static const next = 'next';
+  static const peoplePlanningTitle = 'peoplePlanningTitle';
+  static const areaTitle = 'areaTitle';
+  static const buildingConfigurationTitle = 'buildingConfigurationTitle';
+  static const floorsTitle = 'floorsTitle';
+  static const floorsSubtitle = 'floorsSubtitle';
+  static const numberPersons = 'numberPersons';
 
 }

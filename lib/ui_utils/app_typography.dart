@@ -24,4 +24,9 @@ class AppTypography {
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
+  static const lmLabelMedium = TextStyle(
+    color: AppColors.lmGrey3Color,
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+  );
 }

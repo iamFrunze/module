@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:module/l10n/locale_keys.g.dart';
+import 'package:module/presentation/create_project/widgets/title_page_widget.dart';
 import 'package:module/ui_utils/app_assets.dart';
 
 class PurposeBuildingPage extends StatelessWidget {
@@ -11,29 +12,16 @@ class PurposeBuildingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          _TitleWidget(),
-          Expanded(
+        children: [
+          TitlePageWidget(
+            title: LocaleKeys.purposeBuildingTitle.tr().toUpperCase(),
+          ),
+          const Expanded(
             child: _GridPurposeWidget(),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _TitleWidget extends StatelessWidget {
-  const _TitleWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      LocaleKeys.purposeBuildingTitle.tr().toUpperCase(),
-      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-        letterSpacing: 0.1,
-        fontWeight: FontWeight.w400,
       ),
     );
   }
