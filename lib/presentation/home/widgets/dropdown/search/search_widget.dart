@@ -15,34 +15,49 @@ class _SearchWidgetState extends State<SearchWidget> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return DropdownSearch<String>(
-      popupProps: PopupProps.menu(
-        showSearchBox: true,
-        searchFieldProps: TextFieldProps(
-          cursorColor: Colors.black,
-          autofocus: true,
-          decoration: InputDecoration(
-            fillColor: theme.colorScheme.primary,
-            filled: true,
-            border: const OutlineInputBorder(borderSide: BorderSide.none),
+    return Container(
+      margin: const EdgeInsets.all(8.0),
+      child: DropdownSearch<String>(
+        popupProps: PopupProps.menu(
+          showSearchBox: true,
+          fit: FlexFit.loose,
+          itemBuilder: (context, text, _) {
+            return Container(
+              margin: const EdgeInsets.all(16),
+              child: Text(
+                text,
+                style: theme.textTheme.bodyMedium,
+              ),
+            );
+          },
+          searchFieldProps: TextFieldProps(
+            style: theme.textTheme.bodyMedium,
+            cursorColor: Colors.black,
+            autofocus: true,
+            decoration: InputDecoration(
+              fillColor: theme.colorScheme.primary,
+              filled: true,
+              border: const OutlineInputBorder(borderSide: BorderSide.none),
+            ),
           ),
         ),
-      ),
-      items: MockData.mockSearchList.map((e) => e.toUpperCase()).toList(),
-      dropdownButtonProps: const DropdownButtonProps(isVisible: false),
-      clearButtonProps: const ClearButtonProps(isVisible: true),
+        items: MockData.mockSearchList.map((e) => e.toUpperCase()).toList(),
+        dropdownButtonProps: const DropdownButtonProps(isVisible: false),
+        clearButtonProps: const ClearButtonProps(isVisible: true),
 
-      /// шапка поиска
-      dropdownDecoratorProps: DropDownDecoratorProps(
-        dropdownSearchDecoration: InputDecoration(
-          filled: true,
-          fillColor: theme.colorScheme.primary,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide.none,
+        /// шапка поиска
+        dropdownDecoratorProps: DropDownDecoratorProps(
+          baseStyle: theme.textTheme.bodySmall,
+          dropdownSearchDecoration: InputDecoration(
+            filled: true,
+            fillColor: theme.colorScheme.primary,
+            border: const OutlineInputBorder(
+              borderSide: BorderSide.none,
+            ),
           ),
         ),
+        onChanged: print,
       ),
-      onChanged: print,
     );
   }
 }

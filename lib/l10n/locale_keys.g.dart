@@ -7,5 +7,7 @@ abstract class  LocaleKeys {
   static const sort_firstNew = 'sort.firstNew';
   static const sort_firstOld = 'sort.firstOld';
   static const sort = 'sort';
+  static const contract = 'contract';
+  static const crm = 'crm';
 
 }

@@ -11,12 +11,14 @@ class LightThemeData extends AppTheme {
   @override
   ThemeData buildTheme() {
     return _base.copyWith(
+      backgroundColor: AppColors.lmBackgroundColor,
+      scaffoldBackgroundColor: AppColors.lmBackgroundColor,
       primaryColor: AppColors.lmPrimaryColor,
       colorScheme: buildColorScheme(),
       brightness: Brightness.light,
       appBarTheme: buildAppBarTheme(),
       elevatedButtonTheme: buildElevatedButtonTheme(),
-
+      textTheme: buildTextTheme(),
     );
   }
 
@@ -36,7 +38,10 @@ class LightThemeData extends AppTheme {
 
   @override
   TextTheme buildTextTheme() {
-    return _base.textTheme.copyWith();
+    return _base.textTheme.copyWith(
+      titleMedium: AppTypography.lmTitleMedium,
+      bodyMedium: AppTypography.lmBodyMedium,
+    );
   }
 
   @override

@@ -9,4 +9,14 @@ class AppTypography {
     color: AppColors.lmTextElevatedBtnColor,
     fontSize: 12,
   );
+  static const lmTitleMedium = TextStyle(
+    color: AppColors.lmTitleMediumColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+  static const lmBodyMedium = TextStyle(
+    color: AppColors.lmGreyColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
 }
