@@ -7,5 +7,16 @@
     "firstOld": "By date old first"
   },
   "contract": "Contract № {}",
-  "crm": "CRM {}"
+  "crm": "CRM {}",
+  "purposeBuildingTitle": "Specify the purpose of the building",
+  "purposeBuildingClasses": {
+    "dormitoryForWorkers": "Dormitory for workers",
+    "bathAndLaundryComplex": "Bath and laundry complex",
+    "officeHeadquarters": "Office (headquarters)",
+    "ITRHostel": "ITR hostel",
+    "canteen": "Canteen",
+    "abk": "ABK",
+    "other_class": "Other"
+  },
+  "next": "Next"
 }

@@ -40,6 +40,7 @@ class LightThemeData extends AppTheme {
   TextTheme buildTextTheme() {
     return _base.textTheme.copyWith(
       titleMedium: AppTypography.lmTitleMedium,
+      titleSmall: AppTypography.lmTitleSmall,
       bodyMedium: AppTypography.lmBodyMedium,
     );
   }

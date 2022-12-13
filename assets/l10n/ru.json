@@ -7,6 +7,16 @@
     "firstOld": "По дате сначала старые"
   },
   "contract": "Договор № {}",
-  "crm": "CRM {}"
-
+  "crm": "CRM {}",
+  "purposeBuildingTitle": "Укажите назначение здания",
+  "purposeBuildingClasses": {
+    "dormitoryForWorkers": "Общежитие для рабочих",
+    "bathAndLaundryComplex": "Банно-прачечный комплекс",
+    "officeHeadquarters": "Офис (штаб)",
+    "ITRHostel": "Общежитие ИТР",
+    "canteen": "Столовая",
+    "abk": "АБК",
+    "other_class": "Другое"
+  },
+  "next": "Дальше"
 }

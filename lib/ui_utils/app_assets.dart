@@ -4,6 +4,7 @@ class AppAssets {
   static const filter = 'assets/svg/filter_icon.svg';
   static const sort = 'assets/svg/sort_icon.svg';
   static const currency = 'assets/svg/currency_icon.svg';
+  static const building = 'assets/svg/building_icon.svg';
 
   /// Properties
   static const propertyConfigurationBKB =

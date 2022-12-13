@@ -19,4 +19,9 @@ class AppTypography {
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
+  static const lmTitleSmall = TextStyle(
+    color: AppColors.lmGrey3Color,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
 }
