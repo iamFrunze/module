@@ -1,19 +1,27 @@
+const path = 'assets/svg/';
+const pathProperties = 'assets/svg/properties/';
+
 class AppAssets {
-  static const appIcon = 'assets/svg/app_icon.svg';
-  static const placeholderIcon = 'assets/svg/placeholder_icon.svg';
-  static const filter = 'assets/svg/filter_icon.svg';
-  static const sort = 'assets/svg/sort_icon.svg';
-  static const currency = 'assets/svg/currency_icon.svg';
+  static const appIcon = '${path}app_icon.svg';
+  static const placeholderIcon = '${path}placeholder_icon.svg';
+  static const filter = '${path}filter_icon.svg';
+  static const sort = '${path}sort_icon.svg';
+  static const currency = '${path}currency_icon.svg';
+  static const building = '${path}building_icon.svg';
 
   /// Properties
   static const propertyConfigurationBKB =
-      'assets/svg/properties/property_configuration_bkb_icon.svg';
-  static const propertyFloor = 'assets/svg/properties/property_floor_icon.svg';
-  static const propertyHeight =
-      'assets/svg/properties/property_height_icon.svg';
-  static const propertyPeople =
-      'assets/svg/properties/property_people_icon.svg';
-  static const propertySize = 'assets/svg/properties/property_size_icon.svg';
+      '${pathProperties}property_configuration_bkb_icon.svg';
+  static const propertyConfigurationBBB =
+      '${pathProperties}property_configuration_bbb_icon.svg';
+  static const propertyConfigurationBB =
+      '${pathProperties}property_configuration_bb_icon.svg';
+  static const propertyConfigurationB =
+      '${pathProperties}property_configuration_b_icon.svg';
+  static const propertyFloor = '${pathProperties}property_floor_icon.svg';
+  static const propertyHeight = '${pathProperties}property_height_icon.svg';
+  static const propertyPeople = '${pathProperties}property_people_icon.svg';
+  static const propertySize = '${pathProperties}property_size_icon.svg';
   static const propertyWeatherSunny =
-      'assets/svg/properties/property_weather_sunny_icon.svg';
+      '${pathProperties}property_weather_sunny_icon.svg';
 }

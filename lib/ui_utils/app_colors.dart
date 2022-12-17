@@ -11,5 +11,7 @@ class AppColors {
   static const lmGreyColor = Color(0xFF727B98);
   static const lmGrey2Color = Color(0xFFEDF0F7);
   static const lmTitleMediumColor = Color(0xFF202840);
+  static const lmGrey3Color = Color(0xFF4D5366);
 
+  static const blackColor = Color(0xFF202840);
 }

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:module/l10n/locale_keys.g.dart';
-import 'package:module/presentation/home/home_screen.dart';
+import 'package:module/presentation/create_project/create_project_screen.dart';
 import 'package:module/ui_utils/themes/light_theme.dart';
 
 void main() async {
@@ -20,6 +20,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     context.setLocale(const Locale('ru'));
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       title: LocaleKeys.appTitle.tr(),
-      home: const HomeScreen(),
+      home: const CreateProjectScreen(),
     );
   }
 }
