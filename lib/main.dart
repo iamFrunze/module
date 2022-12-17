@@ -1,9 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:module/l10n/locale_keys.g.dart';
 import 'package:module/presentation/create_project/create_project_screen.dart';
-import 'package:module/presentation/home/home_screen.dart';
 import 'package:module/ui_utils/themes/light_theme.dart';
 
 void main() async {

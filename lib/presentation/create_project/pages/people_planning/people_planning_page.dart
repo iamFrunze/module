@@ -16,7 +16,10 @@ class PeoplePlanningPage extends StatelessWidget {
         children: [
           TitlePageWidget(title: LocaleKeys.peoplePlanningTitle.tr()),
           const SizedBox(height: 32),
-          TextFormFieldWidget(labelText: LocaleKeys.numberPersons.tr()),
+          TextFormFieldWidget(
+            labelText: LocaleKeys.numberPersons.tr(),
+            controller: TextEditingController(text: '100'),
+          ),
         ],
       ),
     );

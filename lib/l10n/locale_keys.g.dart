@@ -21,9 +21,18 @@ abstract class  LocaleKeys {
   static const next = 'next';
   static const peoplePlanningTitle = 'peoplePlanningTitle';
   static const areaTitle = 'areaTitle';
+  static const areaParams_length = 'areaParams.length';
+  static const areaParams_width = 'areaParams.width';
+  static const areaParams = 'areaParams';
   static const buildingConfigurationTitle = 'buildingConfigurationTitle';
+  static const buildConfigurationParams_bkb = 'buildConfigurationParams.bkb';
+  static const buildConfigurationParams_bbb = 'buildConfigurationParams.bbb';
+  static const buildConfigurationParams_bb = 'buildConfigurationParams.bb';
+  static const buildConfigurationParams_b = 'buildConfigurationParams.b';
+  static const buildConfigurationParams = 'buildConfigurationParams';
   static const floorsTitle = 'floorsTitle';
   static const floorsSubtitle = 'floorsSubtitle';
+  static const numberFloor = 'numberFloor';
   static const numberPersons = 'numberPersons';
 
 }

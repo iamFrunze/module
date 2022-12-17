@@ -21,6 +21,9 @@ dependencies:
   flutter_svg: ^1.1.6
   cached_network_image: ^3.2.1
   dropdown_search: ^5.0.5
+  module_textfield:
+    git:
+      url: https://github.com/iamFrunze/module_textfield.git
 
 dev_dependencies:
   flutter_test:

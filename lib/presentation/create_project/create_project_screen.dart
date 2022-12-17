@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:module/l10n/locale_keys.g.dart';
-import 'package:module/presentation/create_project/pages/people_planning/people_planning_page.dart';
+import 'package:module/presentation/create_project/pages/floors/floors_page.dart';
 import 'package:module/presentation/create_project/widgets/chips_widget.dart';
 import 'package:module/presentation/create_project/widgets/progess_indicator_widget.dart';
 import 'package:module/ui_utils/app_dimensions.dart';
@@ -44,7 +44,7 @@ class CreateProjectScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            const PeoplePlanningPage(),
+            const FloorsPage(),
             const _NextBtnWidget(),
           ],
         ),

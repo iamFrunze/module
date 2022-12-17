@@ -21,8 +21,25 @@
   "next": "Next",
   "peoplePlanningTitle": "How many people are planned to be accommodated in the hostel?",
   "areaTitle": "Specify the width and length of the building spot",
+  "areaParams": {
+    "length": "Length",
+    "width": "Width"
+  },
   "buildingConfigurationTitle": "Specify building configuration",
+  "buildConfigurationParams": {
+    "bkb": "block | hall | block",
+    "bbb": "block | block | block",
+    "bb": "block | block",
+    "b": "block"
+  },
   "floorsTitle": "Specify the number of floors of the building",
   "floorsSubtitle": "The recommended minimum number of floors for this building is 1 floor",
+  "numberFloor": {
+    "one": "{} floor",
+    "two": "{} floors",
+    "few": "{} floors",
+    "many": "{} floors",
+    "other": "{} floors"
+  },
   "numberPersons": "Number of persons"
 }
