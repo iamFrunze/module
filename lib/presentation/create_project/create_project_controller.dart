@@ -74,6 +74,7 @@ class CreateProjectController extends ChangeNotifier {
 
   void _addChip(String value) {
     chips.add(value);
+
     notifyListeners();
   }
 
@@ -100,6 +101,13 @@ class CreateProjectController extends ChangeNotifier {
 
   void _setupFloors(String value) {
     newProjectModel = newProjectModel.copyWith(floors: value);
+    notifyListeners();
+  }
+
+  void chipRouting(String value) {
+    final index = chips.indexOf(value);
+    currentPage = Pages.values[index];
+    chips.removeRange(index, chips.length);
     notifyListeners();
   }
 
