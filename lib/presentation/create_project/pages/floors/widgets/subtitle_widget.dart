@@ -8,7 +8,8 @@ class SubTitleFloorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-        LocaleKeys.floorsSubtitle.tr().toUpperCase()
+      LocaleKeys.floorsSubtitle.tr().toUpperCase(),
+      textAlign: TextAlign.center,
     );
   }
 }

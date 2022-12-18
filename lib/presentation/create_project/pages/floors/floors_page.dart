@@ -10,18 +10,16 @@ class FloorsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          TitlePageWidget(title: LocaleKeys.floorsTitle.tr()),
-          const SizedBox(height: 32),
-          const SubTitleFloorWidget(),
-          const SizedBox(height: 32),
-          const Expanded(child: FloorButtonsWidget()),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        TitlePageWidget(title: LocaleKeys.floorsTitle.tr()),
+        const SizedBox(height: 32),
+        const SubTitleFloorWidget(),
+        const SizedBox(height: 32),
+        const Expanded(child: FloorButtonsWidget()),
+      ],
     );
   }
 }
