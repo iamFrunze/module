@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:module/presentation/create_project/create_project_controller.dart';
+import 'package:provider/provider.dart';
 
-class ChipsWidget extends StatelessWidget {
+class ChipsWidget extends StatefulWidget {
   final List<String> listText;
 
   const ChipsWidget({
@@ -9,23 +11,26 @@ class ChipsWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<ChipsWidget> createState() => _ChipsWidgetState();
+}
+
+class _ChipsWidgetState extends State<ChipsWidget> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      width: double.infinity,
-      child: Wrap(
-        direction: Axis.horizontal,
-        spacing: 4,
-        alignment: WrapAlignment.start,
-        children: listText
-            .map(
-              (e) => _ChipWidget(
-                key: UniqueKey(),
-                chipText: e.toUpperCase(),
+    return Wrap(
+      direction: Axis.horizontal,
+      spacing: 4,
+      children: widget.listText
+          .map(
+            (value) => GestureDetector(
+              onTap: () =>
+                  context.read<CreateProjectController>().chipRouting(value),
+              child: _ChipWidget(
+                chipText: value.toUpperCase(),
               ),
-            )
-            .toList(),
-      ),
+            ),
+          )
+          .toList(),
     );
   }
 }
