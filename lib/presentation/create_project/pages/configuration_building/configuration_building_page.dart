@@ -1,58 +1,80 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:module/data/ui/block_model.dart';
 import 'package:module/l10n/locale_keys.g.dart';
+import 'package:module/presentation/create_project/create_project_controller.dart';
 import 'package:module/presentation/create_project/widgets/title_page_widget.dart';
 import 'package:module/presentation/widgets/card_grid_tile_widget.dart';
 import 'package:module/ui_utils/app_assets.dart';
+import 'package:provider/provider.dart';
 
 class ConfigurationBuildingPage extends StatelessWidget {
   const ConfigurationBuildingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          TitlePageWidget(title: LocaleKeys.buildingConfigurationTitle.tr()),
-          const SizedBox(height: 32),
-          const Expanded(child: _GridViewWidget()),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        TitlePageWidget(title: LocaleKeys.buildingConfigurationTitle.tr()),
+        const SizedBox(height: 32),
+        const Expanded(child: _GridViewWidget()),
+      ],
     );
   }
 }
 
-class _GridViewWidget extends StatelessWidget {
+class _GridViewWidget extends StatefulWidget {
   const _GridViewWidget({Key? key}) : super(key: key);
 
   @override
+  State<_GridViewWidget> createState() => _GridViewWidgetState();
+}
+
+class _GridViewWidgetState extends State<_GridViewWidget> {
+  var selectedItem = const BlockModel(icon: '', desc: '');
+
+  @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
-      shrinkWrap: true,
-      mainAxisSpacing: 2,
-      crossAxisSpacing: 2,
-      childAspectRatio: 3,
-      children: [
-        CardGridTileWidget(
-          icon: AppAssets.propertyConfigurationBKB,
-          description: LocaleKeys.buildConfigurationParams_bkb.tr(),
-        ),
-        CardGridTileWidget(
-          icon: AppAssets.propertyConfigurationBBB,
-          description: LocaleKeys.buildConfigurationParams_bbb.tr(),
-        ),
-        CardGridTileWidget(
-          icon: AppAssets.propertyConfigurationBB,
-          description: LocaleKeys.buildConfigurationParams_bb.tr(),
-        ),
-        CardGridTileWidget(
-          icon: AppAssets.propertyConfigurationB,
-          description: LocaleKeys.buildConfigurationParams_b.tr(),
-        ),
-      ],
+    final provider = context.read<CreateProjectController>();
+    final selectedItem =
+        context.watch<CreateProjectController>().selectedConfigurationBuilding;
+
+    final list = [
+      BlockModel(
+        icon: AppAssets.propertyConfigurationBKB,
+        desc: LocaleKeys.buildConfigurationParams_bkb.tr(),
+      ),
+      BlockModel(
+        icon: AppAssets.propertyConfigurationBBB,
+        desc: LocaleKeys.buildConfigurationParams_bbb.tr(),
+      ),
+      BlockModel(
+        icon: AppAssets.propertyConfigurationBB,
+        desc: LocaleKeys.buildConfigurationParams_bb.tr(),
+      ),
+      BlockModel(
+        icon: AppAssets.propertyConfigurationB,
+        desc: LocaleKeys.buildConfigurationParams_b.tr(),
+      ),
+    ]
+        .map(
+          (value) => CardGridTileWidget(
+            icon: value.icon,
+            description: value.desc,
+            isSelected: selectedItem == value.desc,
+            onTap: () => provider.setupConfigurationBuilding = value.desc,
+          ),
+        )
+        .toList();
+
+    return SingleChildScrollView(
+      child: Wrap(
+        spacing: 4,
+        children: list,
+      ),
     );
   }
 }

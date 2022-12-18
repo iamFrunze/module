@@ -5,11 +5,13 @@ import 'package:module/ui_utils/app_typography.dart';
 class FloorSelectionWidget extends StatefulWidget {
   final String text;
   final bool isSelected;
+  final Function()? onTap;
 
   const FloorSelectionWidget({
     Key? key,
     required this.text,
     required this.isSelected,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class _FloorSelectionWidgetState extends State<FloorSelectionWidget> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: widget.onTap,
       child: Ink(
         height: 150,
         width: 300,
@@ -30,12 +32,10 @@ class _FloorSelectionWidgetState extends State<FloorSelectionWidget> {
           borderRadius: const BorderRadius.all(Radius.circular(4)),
         ),
         child: Center(
-          child: Text(
-            widget.text,
-            style: widget.isSelected
-                ? AppTypography.floorSelectedTextStyle
-                : AppTypography.floorUnselectedTextStyle
-          ),
+          child: Text(widget.text,
+              style: widget.isSelected
+                  ? AppTypography.floorSelectedTextStyle
+                  : AppTypography.floorUnselectedTextStyle),
         ),
       ),
     );

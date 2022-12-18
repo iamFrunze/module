@@ -1,18 +1,28 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:module/l10n/locale_keys.g.dart';
-import 'package:module/presentation/create_project/create_project_screen.dart';
+import 'package:module/presentation/create_project/create_project_controller.dart';
 import 'package:module/ui_utils/themes/light_theme.dart';
+import 'package:module/utils/routes/router.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+
   runApp(
-    EasyLocalization(
-      supportedLocales: const [Locale('en', 'US'), Locale('ru')],
-      path: 'assets/l10n',
-      fallbackLocale: const Locale('ru'),
-      child: const MyApp(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<CreateProjectController>(
+          create: (_) => CreateProjectController(),
+        )
+      ],
+      child: EasyLocalization(
+        supportedLocales: const [Locale('en', 'US'), Locale('ru')],
+        path: 'assets/l10n',
+        fallbackLocale: const Locale('ru'),
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -20,17 +30,16 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     context.setLocale(const Locale('ru'));
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: RouterFactory.routes(),
       theme: LightThemeData().buildTheme(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       title: LocaleKeys.appTitle.tr(),
-      home: const CreateProjectScreen(),
     );
   }
 }

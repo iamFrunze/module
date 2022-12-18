@@ -5,11 +5,15 @@ import 'package:module/ui_utils/app_colors.dart';
 class CardGridTileWidget extends StatefulWidget {
   final String icon;
   final String description;
+  final bool isSelected;
+  final void Function()? onTap;
 
   const CardGridTileWidget({
     Key? key,
     required this.icon,
     required this.description,
+    required this.isSelected,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -19,21 +23,20 @@ class CardGridTileWidget extends StatefulWidget {
 class _CardGridTileWidgetState extends State<CardGridTileWidget> {
   var elev = 1.0;
   var strokeWidth = 1.0;
-  bool onChoose = false;
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected = widget.isSelected;
+    isSelected ? elev = 20.0  : elev = 1.0;
+    isSelected ? strokeWidth = 3.0 : strokeWidth = 1.0;
+
     return InkWell(
-      onTap: () {
-        setState(() {
-          onChoose ? elev = 1.0 : elev = 20.0;
-          onChoose ? strokeWidth = 1.0 : strokeWidth = 3.0;
-          onChoose = !onChoose;
-        });
-      },
+      onTap: widget.onTap,
       child: Card(
         elevation: elev,
         child: Container(
+          height: 300,
+          width: MediaQuery.of(context).size.width / 3,
           decoration: BoxDecoration(
             border: Border.all(
               color: Theme.of(context).colorScheme.onSecondary,
@@ -49,7 +52,10 @@ class _CardGridTileWidgetState extends State<CardGridTileWidget> {
                 height: 80,
                 color: AppColors.blackColor,
               ),
-              Text(widget.description.toUpperCase()),
+              Text(
+                widget.description.toUpperCase(),
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),

@@ -18,6 +18,8 @@ class ProgressIndicatorWidget extends StatefulWidget {
 class _ProgressIndicatorWidgetState extends State<ProgressIndicatorWidget> {
   @override
   Widget build(BuildContext context) {
+    final indexPage = widget.part + 1;
+
     return Stack(
       children: [
         Container(
@@ -27,7 +29,7 @@ class _ProgressIndicatorWidgetState extends State<ProgressIndicatorWidget> {
         ),
         Container(
           height: 8,
-          width: widget.screenWidth * (widget.part / 5) -
+          width: widget.screenWidth * (indexPage / 5) -
               (widget.screenWidth * (1 / 6)),
           color: Theme.of(context).colorScheme.onSecondary,
         ),

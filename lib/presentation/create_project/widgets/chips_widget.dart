@@ -10,17 +10,22 @@ class ChipsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      direction: Axis.horizontal,
-      alignment: WrapAlignment.start,
-      children: listText
-          .map(
-            (e) => _ChipWidget(
-              key: UniqueKey(),
-              chipText: e.toUpperCase(),
-            ),
-          )
-          .toList(),
+    return Container(
+      color: Colors.red,
+      width: double.infinity,
+      child: Wrap(
+        direction: Axis.horizontal,
+        spacing: 4,
+        alignment: WrapAlignment.start,
+        children: listText
+            .map(
+              (e) => _ChipWidget(
+                key: UniqueKey(),
+                chipText: e.toUpperCase(),
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 }
