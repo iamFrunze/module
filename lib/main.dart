@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:module/l10n/locale_keys.g.dart';
 import 'package:module/presentation/create_project/create_project_controller.dart';
 import 'package:module/ui_utils/themes/light_theme.dart';
 import 'package:module/utils/routes/router.dart';
@@ -27,6 +26,20 @@ void main() async {
   );
 }
 
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         theme: LightThemeData().buildTheme(),
+//         localizationsDelegates: context.localizationDelegates,
+//         supportedLocales: context.supportedLocales,
+//         locale: context.locale,
+//         home: const Scaffold(body: FilterBottomSheet()));
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -39,7 +52,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      title: LocaleKeys.appTitle.tr(),
+      title: 'Модуль',
     );
   }
 }

@@ -50,7 +50,7 @@ class CreateProjectController extends ChangeNotifier {
         break;
       case Pages.setupArea:
         _setupArea(xAreaController.text, yAreaController.text);
-        _addChip('${xAreaController.text}X${yAreaController.text}');
+        _addChip('${xAreaController.text} X ${yAreaController.text}');
         break;
       case Pages.setupConfigurationBuilding:
         _setupConfigurationBuilding(selectedConfigurationBuilding);
@@ -69,6 +69,7 @@ class CreateProjectController extends ChangeNotifier {
 
   void onClose() {
     currentPage = Pages.setupPurposeBuilding;
+    chips.clear();
     notifyListeners();
   }
 
