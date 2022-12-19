@@ -41,5 +41,20 @@
     "many": "{} floors",
     "other": "{} floors"
   },
-  "numberPersons": "Number of persons"
+  "numberPersons": "Number of persons",
+  "allDate": "Date",
+  "allManagers": "Managers",
+  "purposeBuilding": "Purpose of the building",
+  "configurationBuilding": "building configuration",
+  "areaBlock": "Block size",
+  "numberStoreys": "number of storeys",
+  "ceilingHeightClear": "Clean ceiling height, M",
+  "showProjects": {
+    "one": "Show {} project",
+    "two": "Show {} projects",
+    "few": "Show {} projects",
+    "many": "Show {} projects",
+    "other": "Show {} projects"
+  },
+  "resetFilter": "Reset filter"
 }

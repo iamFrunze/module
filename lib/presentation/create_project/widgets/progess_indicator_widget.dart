@@ -25,13 +25,13 @@ class _ProgressIndicatorWidgetState extends State<ProgressIndicatorWidget> {
         Container(
           height: 8,
           width: widget.screenWidth,
-          color: Theme.of(context).colorScheme.primary,
+          color: Theme.of(context).colorScheme.secondaryContainer,
         ),
         Container(
           height: 8,
           width: widget.screenWidth * (indexPage / 5) -
               (widget.screenWidth * (1 / 6)),
-          color: Theme.of(context).colorScheme.onSecondary,
+          color: Theme.of(context).colorScheme.onSecondaryContainer,
         ),
       ],
     );

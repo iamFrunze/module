@@ -19,8 +19,10 @@ class SubtitleBlockWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Text(LocaleKeys.contract.tr(args: ['$numberContract'])),
             Container(
@@ -33,6 +35,8 @@ class SubtitleBlockWidget extends StatelessWidget {
           ],
         ),
         Row(
+          mainAxisSize: MainAxisSize.min,
+
           children: [
             Text(date),
             const SizedBox(width: 8),

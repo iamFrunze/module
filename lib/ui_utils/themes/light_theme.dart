@@ -42,6 +42,7 @@ class LightThemeData extends AppTheme {
       titleSmall: AppTypography.lmTitleSmall,
       bodyMedium: AppTypography.lmBodyMedium,
       labelMedium: AppTypography.lmLabelMedium,
+      labelLarge: AppTypography.lmLabelLarge,
     );
   }
 
@@ -67,7 +68,10 @@ class LightThemeData extends AppTheme {
   ColorScheme buildColorScheme() {
     return _base.colorScheme.copyWith(
       primary: AppColors.lmPrimaryColor,
-      onSecondary: AppColors.lmGreyColor,
+      secondary: AppColors.lmSecondaryColor,
+      onSecondary: AppColors.lmOnSecondaryColor,
+      secondaryContainer: AppColors.lmSecondaryContainerColor,
+      onSecondaryContainer: AppColors.lmOnSecondaryContainerColor,
     );
   }
 }

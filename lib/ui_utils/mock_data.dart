@@ -125,5 +125,16 @@ class MockData {
     homeBlockMock4,
     homeBlockMock5,
     homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
+    homeBlockMock6,
   ];
 }

@@ -27,6 +27,20 @@ void main() async {
   );
 }
 
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         theme: LightThemeData().buildTheme(),
+//         localizationsDelegates: context.localizationDelegates,
+//         supportedLocales: context.supportedLocales,
+//         locale: context.locale,
+//         home: const Scaffold(body: FilterBottomSheet()));
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 

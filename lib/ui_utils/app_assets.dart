@@ -8,6 +8,8 @@ class AppAssets {
   static const sort = '${path}sort_icon.svg';
   static const currency = '${path}currency_icon.svg';
   static const building = '${path}building_icon.svg';
+  static const calendar = '${path}calendar_icon.svg';
+  static const manager = '${path}manager_icon.svg';
 
   /// Properties
   static const propertyConfigurationBKB =

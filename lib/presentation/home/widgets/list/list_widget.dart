@@ -10,25 +10,17 @@ class ListWidget extends StatefulWidget {
 }
 
 class _ListWidgetState extends State<ListWidget> {
-  final mockList = MockData.mockBlockList;
+  final mockList =
+      MockData.mockBlockList.map((e) => BlockWidget(mock: e)).toList();
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (context, index) => BlockWidget(mock: mockList[index]),
-        childCount: mockList.length,
+    return SliverToBoxAdapter(
+      child: Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: mockList,
       ),
-      // children: [
-      //   ListView.builder(
-      //     physics: const ScrollPhysics(),
-      //     itemCount: mockList.length,
-      //     shrinkWrap: true,
-      //     itemBuilder: (BuildContext context, int index) {
-      //       return BlockWidget(mock: mockList[index]);
-      //     },
-      //   ),
-      // ],
     );
   }
 }

@@ -17,7 +17,7 @@ class NewProjectBtnWidget extends StatelessWidget {
         onPressed: () => context.go(Routes.toCreateProjectScreen),
         icon: const Icon(
           Icons.add,
-          size: 12,
+          size: 24,
           color: AppColors.lmIconElevatedBtnColor,
         ),
         label: Text(LocaleKeys.createNewProject.tr().toUpperCase()),
