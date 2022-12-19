@@ -41,5 +41,20 @@
     "many": "{} этажей",
     "other": "{} этажей"
   },
-  "numberPersons": "Количество человек"
+  "numberPersons": "Количество человек",
+  "allDate": "Все даты",
+  "allManagers": "Все менеждеры",
+  "purposeBuilding": "Назначение здания",
+  "configurationBuilding": "конфигурация здания",
+  "areaBlock": "Размер блока",
+  "numberStoreys": "Этажность",
+  "ceilingHeightClear": "Высота потолков в чистоте, М",
+  "showProjects": {
+    "one": "Показать {} проект",
+    "two": "Показать {} проекта",
+    "few": "Показать {} проекта",
+    "many": "Показать {} проектов",
+    "other": "Показать {} проектов"
+  },
+  "resetFilter": "Сбросить фильтр"
 }

@@ -34,5 +34,14 @@ abstract class  LocaleKeys {
   static const floorsSubtitle = 'floorsSubtitle';
   static const numberFloor = 'numberFloor';
   static const numberPersons = 'numberPersons';
+  static const allDate = 'allDate';
+  static const allManagers = 'allManagers';
+  static const purposeBuilding = 'purposeBuilding';
+  static const configurationBuilding = 'configurationBuilding';
+  static const areaBlock = 'areaBlock';
+  static const numberStoreys = 'numberStoreys';
+  static const ceilingHeightClear = 'ceilingHeightClear';
+  static const showProjects = 'showProjects';
+  static const resetFilter = 'resetFilter';
 
 }

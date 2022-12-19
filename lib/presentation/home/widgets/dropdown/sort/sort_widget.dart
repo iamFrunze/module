@@ -21,7 +21,7 @@ class DropdownSortButtonWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 12,
-              color: Theme.of(context).colorScheme.onSecondary,
+              color: Theme.of(context).colorScheme.onSecondaryContainer,
             ),
           ),
         ),
@@ -31,7 +31,7 @@ class DropdownSortButtonWidget extends StatelessWidget {
       dropdownDecoratorProps: DropDownDecoratorProps(
         baseStyle: TextStyle(
           fontSize: 12,
-          color: Theme.of(context).colorScheme.onSecondary,
+          color: Theme.of(context).colorScheme.onSecondaryContainer,
         ),
         dropdownSearchDecoration: InputDecoration(
           icon: SvgPicture.asset(AppAssets.sort),

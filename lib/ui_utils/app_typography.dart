@@ -29,7 +29,11 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     fontSize: 12,
   );
-
+  static const lmLabelLarge = TextStyle(
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+  );
   static const floorSelectedTextStyle = TextStyle(
     color: Colors.white,
     fontWeight: FontWeight.bold,

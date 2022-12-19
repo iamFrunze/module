@@ -32,10 +32,10 @@ class _SearchWidgetState extends State<SearchWidget> {
           },
           searchFieldProps: TextFieldProps(
             style: theme.textTheme.bodyMedium,
-            cursorColor: Colors.black,
+            cursorColor: theme.colorScheme.onSecondaryContainer,
             autofocus: true,
             decoration: InputDecoration(
-              fillColor: theme.colorScheme.primary,
+              fillColor: theme.colorScheme.secondaryContainer,
               filled: true,
               border: const OutlineInputBorder(borderSide: BorderSide.none),
             ),

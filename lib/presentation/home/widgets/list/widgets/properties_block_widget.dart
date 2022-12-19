@@ -18,6 +18,8 @@ class PropertiesBlockWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
+
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         PropertyWeatherWidget(isSunny: propertiesMock.isSunny),

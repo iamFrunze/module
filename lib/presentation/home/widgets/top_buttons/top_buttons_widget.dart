@@ -16,9 +16,9 @@ class TopButtonsWidget extends StatelessWidget {
         maxHeight: AppDimensions.elevatedBtnHeight,
         child: Row(
           children: const [
-            Expanded(flex: 2, child: NewProjectBtnWidget()),
+            Expanded(flex: 3, child: NewProjectBtnWidget()),
             SizedBox(width: 16),
-            FilterBtnWidget()
+            Expanded(child: FilterBtnWidget())
           ],
         ),
       ),

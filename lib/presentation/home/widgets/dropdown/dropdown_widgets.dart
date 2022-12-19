@@ -42,7 +42,7 @@ class _DropdownWidgetsState extends State<DropdownWidgets> {
                     setState(() => isVisibleSearchBar = !isVisibleSearchBar),
                 icon: Icon(
                   Icons.search,
-                  color: Theme.of(context).colorScheme.onSecondary,
+                  color: Theme.of(context).colorScheme.onSecondaryContainer,
                 ),
               ),
               Visibility(

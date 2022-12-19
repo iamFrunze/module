@@ -12,6 +12,10 @@ class AppColors {
   static const lmGrey2Color = Color(0xFFEDF0F7);
   static const lmTitleMediumColor = Color(0xFF202840);
   static const lmGrey3Color = Color(0xFF4D5366);
+  static const lmSecondaryColor = Color(0xFF202840);
+  static const lmOnSecondaryColor = Colors.white;
+  static const lmSecondaryContainerColor = Color(0xFFEDF0F7);
+  static const lmOnSecondaryContainerColor = Color(0xFF4D5366);
 
   static const blackColor = Color(0xFF202840);
 }

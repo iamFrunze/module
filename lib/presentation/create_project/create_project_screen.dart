@@ -58,7 +58,7 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                 },
                 icon: Icon(
                   Icons.close,
-                  color: Theme.of(context).colorScheme.onSecondary,
+                  color: Theme.of(context).colorScheme.onSecondaryContainer,
                 ),
               ),
             ),
