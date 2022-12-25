@@ -16,6 +16,7 @@ class FilterBtnWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return SizedBox(
       height: AppDimensions.elevatedBtnHeight,
       child: ElevatedButton.icon(
@@ -27,7 +28,7 @@ class FilterBtnWidget extends StatelessWidget {
         onPressed: () {
           context.read<HomeScreenController>().changeVisibilityFilter();
           if (AppConfig.checkPlatformType(context) != PlatformType.desktop) {
-            showModalBottomSheet(
+            showModalBottomSheet<DateTime>(
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
               ),

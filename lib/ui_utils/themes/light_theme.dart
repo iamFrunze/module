@@ -54,11 +54,9 @@ class LightThemeData extends AppTheme {
         textStyle: MaterialStateProperty.all(AppTypography.lmElevatedBtn),
         backgroundColor: MaterialStateProperty.resolveWith(
           (states) {
-            if (states.contains(MaterialState.disabled)) {
-              return AppColors.lmGreyColor;
-            } else {
-              return AppColors.lmElevatedBtnColor;
-            }
+            return states.contains(MaterialState.disabled)
+                ? AppColors.lmGreyColor
+                : AppColors.lmElevatedBtnColor;
           },
         ),
       ),

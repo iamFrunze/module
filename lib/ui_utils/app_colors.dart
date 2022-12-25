@@ -18,4 +18,7 @@ class AppColors {
   static const lmOnSecondaryContainerColor = Color(0xFF4D5366);
 
   static const blackColor = Color(0xFF202840);
+
+  static const datePrimaryColor = Color(0xFF202840);
+  static const dateOnPrimaryColor = Colors.white;
 }

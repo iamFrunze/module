@@ -4,7 +4,7 @@ import 'package:module/presentation/home/home_screen.dart';
 import 'package:module/utils/routes/routes.dart';
 
 class RouterFactory {
-  static routes() => GoRouter(
+  static GoRouter routes() => GoRouter(
         routes: [
           GoRoute(
             path: Routes.toHome,

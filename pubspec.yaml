@@ -9,24 +9,25 @@ environment:
   sdk: ">=2.17.6 <3.0.0"
 
 dependencies:
+  animated_text_kit: ^4.2.2
+  cached_network_image: ^3.2.1
+  cupertino_icons: ^1.0.2
+  dropdown_search: ^5.0.5
+  easy_localization: ^3.0.1
+  equatable: ^2.0.5
+
   flutter:
     sdk: flutter
-
-  animated_text_kit: ^4.2.2
-  cupertino_icons: ^1.0.2
-  provider: ^6.0.4
-  easy_localization: ^3.0.1
-  logger: ^1.1.0
-  equatable: ^2.0.5
   flutter_svg: ^1.1.6
-  cached_network_image: ^3.2.1
-  dropdown_search: ^5.0.5
+  go_router: ^5.2.4
+  logger: ^1.1.0
   module_textfield:
     git:
       url: https://github.com/iamFrunze/module_textfield.git
-  go_router: ^5.2.4
+  provider: ^6.0.4
   responsive_framework: ^0.2.0
   surf_lint_rules: ^1.5.0
+  table_calendar: ^3.0.8
 
 dev_dependencies:
   flutter_test:

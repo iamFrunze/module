@@ -14,6 +14,18 @@ class MockData {
     'Результат поиска 7',
   ];
 
+  static const mockMangers = [
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+    'Константин Константинов',
+  ];
+
   /// Home block данные
   static final homeBlockMock1 = HomeBlockMock(
     title: 'Общежитие для дворян',
@@ -118,7 +130,7 @@ class MockData {
     price: 2351211222,
   );
 
-   static final mockBlockList = [
+  static final mockBlockList = [
     homeBlockMock1,
     homeBlockMock2,
     homeBlockMock3,
