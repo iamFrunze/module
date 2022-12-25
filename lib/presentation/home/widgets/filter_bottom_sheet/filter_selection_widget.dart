@@ -44,26 +44,24 @@ class FilterSelectionWidget extends StatelessWidget {
                   ),
                   child: SvgPicture.asset(
                     e,
-                    height: 48,
+                    height: 24,
                     color: Theme.of(context).colorScheme.onSecondary,
                   ),
                 ),
         )
         .toList();
 
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            leftWidget.toUpperCase(),
-            style: Theme.of(context).textTheme.labelLarge,
-          ),
-          Row(
-            children: containerListWidgets,
-          )
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          leftWidget.toUpperCase(),
+          style: Theme.of(context).textTheme.labelMedium,
+        ),
+        Row(
+          children: containerListWidgets,
+        )
+      ],
     );
   }
 }

@@ -14,7 +14,6 @@ class PriceBlockWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
-
       children: [
         Text(
           '$price',

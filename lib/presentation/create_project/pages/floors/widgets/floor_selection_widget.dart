@@ -23,7 +23,7 @@ class _FloorSelectionWidgetState extends State<FloorSelectionWidget> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: widget.onTap,
-      child: Ink(
+      child: Container(
         height: 150,
         width: 300,
         decoration: BoxDecoration(

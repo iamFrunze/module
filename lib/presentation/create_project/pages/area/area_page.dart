@@ -16,22 +16,23 @@ class AreaPage extends StatefulWidget {
 class _AreaPageState extends State<AreaPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        TitlePageWidget(title: LocaleKeys.areaTitle.tr()),
-        const SizedBox(height: 32),
-        TextFormFieldWidget(
-          labelText: LocaleKeys.areaParams_length.tr(),
-          controller: context.watch<CreateProjectController>().xAreaController,
-        ),
-        TextFormFieldWidget(
-          labelText: LocaleKeys.areaParams_width.tr(),
-          controller: context.watch<CreateProjectController>().yAreaController,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TitlePageWidget(title: LocaleKeys.areaTitle.tr()),
+          const SizedBox(height: 32),
+          TextFormFieldWidget(
+            labelText: LocaleKeys.areaParams_length.tr(),
+            controller:
+                context.watch<CreateProjectController>().xAreaController,
+          ),
+          TextFormFieldWidget(
+            labelText: LocaleKeys.areaParams_width.tr(),
+            controller:
+                context.watch<CreateProjectController>().yAreaController,
+          ),
+        ],
+      ),
     );
   }
 }

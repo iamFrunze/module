@@ -18,47 +18,45 @@ class FilterDropdownWidget extends StatelessWidget {
     final containerLeftWidget = isTextLeftWidget
         ? Text(
             leftWidget.toUpperCase(),
-            style: Theme.of(context).textTheme.labelLarge,
+            style: Theme.of(context).textTheme.labelMedium,
           )
         : SvgPicture.asset(leftWidget);
 
-    return Expanded(
-      child: Row(
-        children: [
-          containerLeftWidget,
-          const SizedBox(width: 24),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(4)),
-                color: Theme.of(context).primaryColor,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      rightWidget.toUpperCase(),
-                      style: Theme.of(context).textTheme.labelLarge,
+    return Row(
+      children: [
+        containerLeftWidget,
+        const SizedBox(width: 24),
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
+              color: Theme.of(context).primaryColor,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    rightWidget.toUpperCase(),
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Theme.of(context).colorScheme.secondaryContainer,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Theme.of(context).colorScheme.secondaryContainer,
-                      ),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.keyboard_arrow_down),
-                      ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.keyboard_arrow_down),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-          )
-        ],
-      ),
+          ),
+        )
+      ],
     );
   }
 }
