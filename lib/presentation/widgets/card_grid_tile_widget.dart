@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:module/ui_utils/app_colors.dart';
+import 'package:module/ui_utils/app_config.dart';
 
 class CardGridTileWidget extends StatefulWidget {
   final String icon;
@@ -27,15 +28,15 @@ class _CardGridTileWidgetState extends State<CardGridTileWidget> {
   @override
   Widget build(BuildContext context) {
     bool isSelected = widget.isSelected;
-    isSelected ? elev = 20.0  : elev = 1.0;
+    isSelected ? elev = 20.0 : elev = 1.0;
     isSelected ? strokeWidth = 3.0 : strokeWidth = 1.0;
 
-    return InkWell(
-      onTap: widget.onTap,
-      child: Card(
-        elevation: elev,
+    return Card(
+      elevation: elev,
+      child: InkWell(
+        onTap: widget.onTap,
         child: Container(
-          height: 300,
+          height: MediaQuery.of(context).size.height / 5,
           width: MediaQuery.of(context).size.width / 3,
           decoration: BoxDecoration(
             border: Border.all(
@@ -44,12 +45,11 @@ class _CardGridTileWidgetState extends State<CardGridTileWidget> {
             ),
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(
                 widget.icon,
-                height: 80,
+                width: AppConfig.appDimensions(context).iconSize,
                 color: AppColors.blackColor,
               ),
               Text(

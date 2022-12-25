@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:module/l10n/locale_keys.g.dart';
 import 'package:module/ui_utils/app_colors.dart';
-import 'package:module/ui_utils/app_dimensions.dart';
+import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 import 'package:module/utils/routes/routes.dart';
 
 class NewProjectBtnWidget extends StatelessWidget {
@@ -20,7 +20,9 @@ class NewProjectBtnWidget extends StatelessWidget {
           size: 24,
           color: AppColors.lmIconElevatedBtnColor,
         ),
-        label: Text(LocaleKeys.createNewProject.tr().toUpperCase()),
+        label: FittedBox(
+          child: Text(LocaleKeys.createNewProject.tr().toUpperCase()),
+        ),
       ),
     );
   }

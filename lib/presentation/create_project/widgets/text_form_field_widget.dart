@@ -5,11 +5,9 @@ class TextFormFieldWidget extends StatefulWidget {
   final String labelText;
   final TextEditingController controller;
 
-  const TextFormFieldWidget({
-    Key? key,
-    required this.labelText,
-    required this.controller
-  }) : super(key: key);
+  const TextFormFieldWidget(
+      {Key? key, required this.labelText, required this.controller})
+      : super(key: key);
 
   @override
   State<TextFormFieldWidget> createState() => _TextFormFieldWidgetState();

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:module/l10n/locale_keys.g.dart';
-import 'package:module/ui_utils/app_dimensions.dart';
+import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 
 class FilterBottomButtonsWidget extends StatelessWidget {
   const FilterBottomButtonsWidget({Key? key}) : super(key: key);
@@ -15,7 +15,8 @@ class FilterBottomButtonsWidget extends StatelessWidget {
             height: AppDimensions.elevatedBtnHeight,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text(LocaleKeys.showProjects.plural(3).toUpperCase()),
+              child: FittedBox(
+                  child: Text(LocaleKeys.showProjects.plural(3).toUpperCase())),
             ),
           ),
         ),
@@ -30,10 +31,12 @@ class FilterBottomButtonsWidget extends StatelessWidget {
                   (states) => Theme.of(context).colorScheme.secondaryContainer,
                 ),
               ),
-              child: Text(
-                LocaleKeys.resetFilter.tr().toUpperCase(),
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSecondaryContainer,
+              child: FittedBox(
+                child: Text(
+                  LocaleKeys.resetFilter.tr().toUpperCase(),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondaryContainer,
+                  ),
                 ),
               ),
             ),

@@ -16,19 +16,19 @@ class PeoplePlanningPage extends StatefulWidget {
 class _PeoplePlanningPageState extends State<PeoplePlanningPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        TitlePageWidget(title: LocaleKeys.peoplePlanningTitle.tr()),
-        const SizedBox(height: 32),
-        TextFormFieldWidget(
-          labelText: LocaleKeys.numberPersons.tr(),
-          controller:
-              context.watch<CreateProjectController>().peoplePlanningController,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TitlePageWidget(title: LocaleKeys.peoplePlanningTitle.tr()),
+          const SizedBox(height: 32),
+          TextFormFieldWidget(
+            labelText: LocaleKeys.numberPersons.tr(),
+            controller: context
+                .watch<CreateProjectController>()
+                .peoplePlanningController,
+          ),
+        ],
+      ),
     );
   }
 }

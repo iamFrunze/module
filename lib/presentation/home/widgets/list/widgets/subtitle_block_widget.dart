@@ -36,7 +36,6 @@ class SubtitleBlockWidget extends StatelessWidget {
         ),
         Row(
           mainAxisSize: MainAxisSize.min,
-
           children: [
             Text(date),
             const SizedBox(width: 8),

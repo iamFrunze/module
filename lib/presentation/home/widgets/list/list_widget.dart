@@ -15,12 +15,13 @@ class _ListWidgetState extends State<ListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Wrap(
-        spacing: 8,
-        runSpacing: 8,
-        children: mockList,
-      ),
+    return Wrap(
+      alignment: WrapAlignment.center,
+      crossAxisAlignment: WrapCrossAlignment.center,
+      runAlignment: WrapAlignment.center,
+      spacing: 4,
+      runSpacing: 4,
+      children: mockList,
     );
   }
 }

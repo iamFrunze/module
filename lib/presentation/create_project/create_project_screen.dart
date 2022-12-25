@@ -11,7 +11,7 @@ import 'package:module/presentation/create_project/pages/people_planning/people_
 import 'package:module/presentation/create_project/pages/purpose_building/purpose_building_page.dart';
 import 'package:module/presentation/create_project/widgets/chips_widget.dart';
 import 'package:module/presentation/create_project/widgets/progess_indicator_widget.dart';
-import 'package:module/ui_utils/app_dimensions.dart';
+import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 import 'package:module/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
 
@@ -45,7 +45,7 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
           right: 24,
           left: 24,
           bottom: 24,
-          top: kToolbarHeight,
+          top: 24,
         ),
         child: Column(
           children: [
@@ -62,19 +62,19 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 24),
             ProgressIndicatorWidget(
               screenWidth: screenSize.width,
               part: currentPageIndex,
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 24),
             Align(
               alignment: Alignment.centerLeft,
               child: ChipsWidget(
                 listText: context.watch<CreateProjectController>().chips,
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 24),
             Expanded(
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 250),
@@ -103,6 +103,7 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                 child: pages[currentPageIndex],
               ),
             ),
+            const SizedBox(height: 24),
             const _NextBtnWidget(),
           ],
         ),
@@ -128,8 +129,10 @@ class _NextBtnWidgetState extends State<_NextBtnWidget> {
         onPressed: context.watch<CreateProjectController>().canNextPage
             ? () => context.read<CreateProjectController>().nextPage()
             : null,
-        child: Text(
-          LocaleKeys.next.tr().toUpperCase(),
+        child: FittedBox(
+          child: Text(
+            LocaleKeys.next.tr().toUpperCase(),
+          ),
         ),
       ),
     );

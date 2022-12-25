@@ -26,12 +26,14 @@ class FloorButtonsWidget extends StatelessWidget {
         )
         .toList();
 
-    return SingleChildScrollView(
-      child: Wrap(
-        direction: Axis.vertical,
-        spacing: 4,
-        children: floors,
-      ),
+    return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
+      alignment: WrapAlignment.center,
+      runAlignment: WrapAlignment.center,
+      direction: Axis.vertical,
+      runSpacing: 4,
+      spacing: 4,
+      children: floors,
     );
   }
 }

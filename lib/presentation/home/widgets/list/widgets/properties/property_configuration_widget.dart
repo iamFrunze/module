@@ -12,18 +12,17 @@ class PropertyConfigurationWidget extends StatelessWidget {
     required this.builderConfiguration,
   }) : super(key: key);
 
-  /// TODO(iam): add another icon
   @override
   Widget build(BuildContext context) {
     switch (builderConfiguration) {
       case BuilderConfiguration.BKB:
         return SvgPicture.asset(AppAssets.propertyConfigurationBKB);
       case BuilderConfiguration.BBB:
-        return Container();
+        return SvgPicture.asset(AppAssets.propertyConfigurationBBB);
       case BuilderConfiguration.BB:
-        return Container();
+        return SvgPicture.asset(AppAssets.propertyConfigurationBB);
       case BuilderConfiguration.B:
-        return Container();
+        return SvgPicture.asset(AppAssets.propertyConfigurationB);
     }
   }
 }

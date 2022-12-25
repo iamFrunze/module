@@ -2,14 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:module/ui_utils/app_assets.dart';
-import 'package:module/ui_utils/app_dimensions.dart';
+import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 import 'package:module/ui_utils/mock_data.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({Key? key}) : super(key: key);
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override

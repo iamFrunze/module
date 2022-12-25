@@ -10,6 +10,7 @@ class LightThemeData extends AppTheme {
   @override
   ThemeData buildTheme() {
     return _base.copyWith(
+      visualDensity: VisualDensity.adaptivePlatformDensity,
       backgroundColor: AppColors.lmBackgroundColor,
       scaffoldBackgroundColor: AppColors.lmBackgroundColor,
       primaryColor: AppColors.lmPrimaryColor,

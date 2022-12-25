@@ -6,6 +6,8 @@ import 'package:module/presentation/create_project/create_project_controller.dar
 import 'package:module/presentation/create_project/widgets/title_page_widget.dart';
 import 'package:module/presentation/widgets/card_grid_tile_widget.dart';
 import 'package:module/ui_utils/app_assets.dart';
+import 'package:module/ui_utils/app_config.dart';
+import 'package:module/ui_utils/platform_type.dart';
 import 'package:provider/provider.dart';
 
 class ConfigurationBuildingPage extends StatelessWidget {
@@ -13,14 +15,11 @@ class ConfigurationBuildingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
+    return ListView(
       children: [
         TitlePageWidget(title: LocaleKeys.buildingConfigurationTitle.tr()),
         const SizedBox(height: 32),
-        const Expanded(child: _GridViewWidget()),
+        const _GridViewWidget(),
       ],
     );
   }
@@ -70,11 +69,26 @@ class _GridViewWidgetState extends State<_GridViewWidget> {
         )
         .toList();
 
-    return SingleChildScrollView(
-      child: Wrap(
-        spacing: 4,
-        children: list,
-      ),
+    return LayoutBuilder(
+      builder: (context, viewPort) {
+        if (AppConfig.checkPlatformType(context) != PlatformType.mobile) {
+          return Center(
+            child: Wrap(
+              spacing: 4,
+              runSpacing: 4,
+              children: list,
+            ),
+          );
+        } else {
+          return ListView.separated(
+            shrinkWrap: true,
+            physics: const ScrollPhysics(),
+            itemBuilder: (context, index) => list[index],
+            separatorBuilder: (_, __) => const SizedBox(height: 4),
+            itemCount: list.length,
+          );
+        }
+      },
     );
   }
 }

@@ -17,33 +17,32 @@ class BlockWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // margin: const EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         border: Border.all(
           width: 1,
           color: Theme.of(context).colorScheme.secondaryContainer,
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TitleBlockWidget(title: mock.title),
-            const SizedBox(height: 12),
-            SubtitleBlockWidget(
-              numberContract: mock.numberContract,
-              numberCrm: mock.numberCrm,
-              date: mock.date,
-              personName: mock.personName,
-            ),
-            const SizedBox(height: 12),
-            PropertiesBlockWidget(
-              propertiesMock: mock.homeBlockPropertiesMock,
-            ),
-            const SizedBox(height: 12),
-            PriceBlockWidget(price: mock.price),
-          ],
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleBlockWidget(title: mock.title),
+          const SizedBox(height: 12),
+          SubtitleBlockWidget(
+            numberContract: mock.numberContract,
+            numberCrm: mock.numberCrm,
+            date: mock.date,
+            personName: mock.personName,
+          ),
+          const SizedBox(height: 12),
+          PropertiesBlockWidget(
+            propertiesMock: mock.homeBlockPropertiesMock,
+          ),
+          const SizedBox(height: 12),
+          PriceBlockWidget(price: mock.price),
+        ],
       ),
     );
   }
