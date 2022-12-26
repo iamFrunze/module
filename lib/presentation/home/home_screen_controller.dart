@@ -11,6 +11,31 @@ class HomeScreenController extends ChangeNotifier {
 
   String date = LocaleKeys.allDate.tr();
 
+  String configurationBuilding = '';
+  String areaBlock = '';
+  String floors = '';
+  String ceilingHeight = '';
+
+  void setupConfBuilding(String value) {
+    configurationBuilding = value;
+    notifyListeners();
+  }
+
+  void setupAreaBlock(String value) {
+    areaBlock = value;
+    notifyListeners();
+  }
+
+  void setupFloors(String value) {
+    floors = value;
+    notifyListeners();
+  }
+
+  void setupCeilingHeight(String value) {
+    ceilingHeight = value;
+    notifyListeners();
+  }
+
   void setupDate(DateTimeRange? dateTimeRange) {
     if (dateTimeRange != null) {
       final start = _dateFormat.format(dateTimeRange.start);

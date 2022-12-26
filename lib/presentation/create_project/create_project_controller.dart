@@ -16,14 +16,14 @@ class CreateProjectController extends ChangeNotifier {
   final chips = <String>[];
   var selectedPurposeBuilding = '';
 
-  set setupSelectedPurposeBuilding(value) {
+  set setupSelectedPurposeBuilding(String value) {
     selectedPurposeBuilding = value;
     notifyListeners();
   }
 
   var selectedConfigurationBuilding = '';
 
-  set setupConfigurationBuilding(value) {
+  set setupConfigurationBuilding(String value) {
     selectedConfigurationBuilding = value;
     notifyListeners();
   }
@@ -33,7 +33,7 @@ class CreateProjectController extends ChangeNotifier {
   final yAreaController = TextEditingController(text: '100');
   var selectedFloor = '';
 
-  set setupFloor(value) {
+  set setupFloor(String value) {
     selectedFloor = value;
     notifyListeners();
   }
