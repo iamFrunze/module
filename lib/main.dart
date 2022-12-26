@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.setLocale(const Locale('ru'));
+
     return MaterialApp.router(
       builder: (context, child) {
         return ResponsiveWrapper.builder(
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
           breakpoints: [
             const ResponsiveBreakpoint.resize(480, name: MOBILE),
             const ResponsiveBreakpoint.autoScale(800, name: TABLET),
-            const ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+            const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
           ],
         );
       },

@@ -1,8 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:module/l10n/locale_keys.g.dart';
-import 'package:module/presentation/home/home_screen_controller.dart';
-import 'package:provider/provider.dart';
 
 class FilterTitle extends StatelessWidget {
   const FilterTitle({Key? key}) : super(key: key);
@@ -12,18 +10,17 @@ class FilterTitle extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(LocaleKeys.filter.tr().toUpperCase(),
-            style: Theme.of(context).textTheme.titleMedium),
-        Container(
+        Text(
+          LocaleKeys.filter.tr().toUpperCase(),
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+        DecoratedBox(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Theme.of(context).primaryColor,
           ),
           child: IconButton(
-            onPressed: () {
-              context.read<HomeScreenController>().changeVisibilityFilter();
-              Navigator.pop(context);
-            },
+            onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.close),
           ),
         ),

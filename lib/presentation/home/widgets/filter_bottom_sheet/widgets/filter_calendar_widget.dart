@@ -12,6 +12,7 @@ class FilterCalendarWidget extends StatelessWidget {
     return FilterDropdownWidget(
       leftWidget: AppAssets.calendar,
       rightWidget: LocaleKeys.allDate.tr(),
+      isCalendar: true,
     );
   }
 }
