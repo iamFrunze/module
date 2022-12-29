@@ -8,6 +8,16 @@ class NewProjectModel extends Equatable {
   final String configurationBuilding;
   final String floors;
 
+  @override
+  List<Object?> get props => [
+        purposeBuilding,
+        peoplePlanning,
+        xArea,
+        yArea,
+        configurationBuilding,
+        floors,
+      ];
+
   const NewProjectModel({
     this.purposeBuilding = '',
     this.peoplePlanning = '100',
@@ -35,14 +45,4 @@ class NewProjectModel extends Equatable {
       floors: floors ?? this.floors,
     );
   }
-
-  @override
-  List<Object?> get props => [
-        purposeBuilding,
-        peoplePlanning,
-        xArea,
-        yArea,
-        configurationBuilding,
-        floors,
-      ];
 }

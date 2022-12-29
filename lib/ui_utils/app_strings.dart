@@ -4,6 +4,6 @@ import 'package:module/l10n/locale_keys.g.dart';
 class AppStrings {
   static final sortList = <String>[
     LocaleKeys.sort_firstNew.tr().toUpperCase(),
-    LocaleKeys.sort_firstOld.tr().toUpperCase()
+    LocaleKeys.sort_firstOld.tr().toUpperCase(),
   ];
 }

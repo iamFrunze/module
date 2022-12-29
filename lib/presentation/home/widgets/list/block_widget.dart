@@ -20,7 +20,6 @@ class BlockWidget extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         border: Border.all(
-          width: 1,
           color: Theme.of(context).colorScheme.secondaryContainer,
         ),
       ),

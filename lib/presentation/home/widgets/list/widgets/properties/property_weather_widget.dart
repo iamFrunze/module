@@ -11,15 +11,10 @@ class PropertyWeatherWidget extends StatelessWidget {
     required this.isSunny,
   }) : super(key: key);
 
-  /// TODO(iam) add another icon
   @override
   Widget build(BuildContext context) {
     return isSunny
         ? SvgPicture.asset(AppAssets.propertyWeatherSunny)
-        : Container(
-            height: 4,
-            width: 4,
-            color: Colors.blue,
-          );
+        : SvgPicture.asset(AppAssets.propertyWeatherColdly);
   }
 }

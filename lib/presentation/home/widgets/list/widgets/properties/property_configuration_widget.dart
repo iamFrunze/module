@@ -15,13 +15,13 @@ class PropertyConfigurationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (builderConfiguration) {
-      case BuilderConfiguration.BKB:
+      case BuilderConfiguration.bkb:
         return SvgPicture.asset(AppAssets.propertyConfigurationBKB);
-      case BuilderConfiguration.BBB:
+      case BuilderConfiguration.bbb:
         return SvgPicture.asset(AppAssets.propertyConfigurationBBB);
-      case BuilderConfiguration.BB:
+      case BuilderConfiguration.bb:
         return SvgPicture.asset(AppAssets.propertyConfigurationBB);
-      case BuilderConfiguration.B:
+      case BuilderConfiguration.b:
         return SvgPicture.asset(AppAssets.propertyConfigurationB);
     }
   }

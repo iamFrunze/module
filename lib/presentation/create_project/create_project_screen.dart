@@ -10,7 +10,7 @@ import 'package:module/presentation/create_project/pages/floors/floors_page.dart
 import 'package:module/presentation/create_project/pages/people_planning/people_planning_page.dart';
 import 'package:module/presentation/create_project/pages/purpose_building/purpose_building_page.dart';
 import 'package:module/presentation/create_project/widgets/chips_widget.dart';
-import 'package:module/presentation/create_project/widgets/progess_indicator_widget.dart';
+import 'package:module/presentation/create_project/widgets/progress_indicator_widget.dart';
 import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 import 'package:module/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
@@ -81,24 +81,16 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                 transitionBuilder: (child, animation) {
                   final inAnimation = Tween<Offset>(
                     begin: const Offset(1.0, 0.0),
-                    end: const Offset(0.0, 0.0),
+                    end: Offset.zero,
                   ).animate(animation);
                   final outAnimation = Tween<Offset>(
                     begin: const Offset(-1.0, 0.0),
-                    end: const Offset(0.0, 0.0),
+                    end: Offset.zero,
                   ).animate(animation);
 
-                  if (child.key == ValueKey(currentPageIndex)) {
-                    return SlideTransition(
-                      position: inAnimation,
-                      child: child,
-                    );
-                  } else {
-                    return SlideTransition(
-                      position: outAnimation,
-                      child: child,
-                    );
-                  }
+                  return child.key == ValueKey(currentPageIndex)
+                      ? SlideTransition(position: inAnimation, child: child)
+                      : SlideTransition(position: outAnimation, child: child);
                 },
                 child: pages[currentPageIndex],
               ),

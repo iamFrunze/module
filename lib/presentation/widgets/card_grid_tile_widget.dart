@@ -22,12 +22,12 @@ class CardGridTileWidget extends StatefulWidget {
 }
 
 class _CardGridTileWidgetState extends State<CardGridTileWidget> {
-  var elev = 1.0;
-  var strokeWidth = 1.0;
+  double elev = 1.0;
+  double strokeWidth = 1.0;
 
   @override
   Widget build(BuildContext context) {
-    bool isSelected = widget.isSelected;
+    final isSelected = widget.isSelected;
     isSelected ? elev = 20.0 : elev = 1.0;
     isSelected ? strokeWidth = 3.0 : strokeWidth = 1.0;
 

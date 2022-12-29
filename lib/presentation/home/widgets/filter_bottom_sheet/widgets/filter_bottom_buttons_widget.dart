@@ -16,7 +16,8 @@ class FilterBottomButtonsWidget extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               child: FittedBox(
-                  child: Text(LocaleKeys.showProjects.plural(3).toUpperCase())),
+                child: Text(LocaleKeys.showProjects.plural(3).toUpperCase()),
+              ),
             ),
           ),
         ),

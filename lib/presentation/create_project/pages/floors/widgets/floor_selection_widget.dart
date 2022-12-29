@@ -32,10 +32,12 @@ class _FloorSelectionWidgetState extends State<FloorSelectionWidget> {
           borderRadius: const BorderRadius.all(Radius.circular(4)),
         ),
         child: Center(
-          child: Text(widget.text,
-              style: widget.isSelected
-                  ? AppTypography.floorSelectedTextStyle
-                  : AppTypography.floorUnselectedTextStyle),
+          child: Text(
+            widget.text,
+            style: widget.isSelected
+                ? AppTypography.floorSelectedTextStyle
+                : AppTypography.floorUnselectedTextStyle,
+          ),
         ),
       ),
     );

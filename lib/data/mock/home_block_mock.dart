@@ -1,8 +1,8 @@
 enum BuilderConfiguration {
-  BBB,
-  BKB,
-  BB,
-  B,
+  bbb,
+  bkb,
+  bb,
+  b,
 }
 
 class HomeBlockPropertiesMock {
