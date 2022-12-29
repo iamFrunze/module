@@ -10,33 +10,53 @@ enum Pages {
 }
 
 class CreateProjectController extends ChangeNotifier {
-  var currentPage = Pages.setupPurposeBuilding;
-  var newProjectModel = const NewProjectModel();
-
   final chips = <String>[];
-  var selectedPurposeBuilding = '';
-
-  set setupSelectedPurposeBuilding(String value) {
-    selectedPurposeBuilding = value;
-    notifyListeners();
-  }
-
-  var selectedConfigurationBuilding = '';
-
-  set setupConfigurationBuilding(String value) {
-    selectedConfigurationBuilding = value;
-    notifyListeners();
-  }
-
   final peoplePlanningController = TextEditingController(text: '100');
   final xAreaController = TextEditingController(text: '100');
   final yAreaController = TextEditingController(text: '100');
-  var selectedFloor = '';
+  Pages currentPage = Pages.setupPurposeBuilding;
+  NewProjectModel newProjectModel = const NewProjectModel();
 
-  set setupFloor(String value) {
-    selectedFloor = value;
+  String get selectedPurposeBuilding => _selectedPurposeBuilding;
+
+  set selectedPurposeBuilding(String value) {
+    _selectedPurposeBuilding = value;
     notifyListeners();
   }
+
+  String get selectedConfigurationBuilding => _selectedConfigurationBuilding;
+
+  set selectedFloor(String value) {
+    _selectedFloor = value;
+    notifyListeners();
+  }
+
+  String get selectedFloor => _selectedFloor;
+
+  set selectedConfigurationBuilding(String value) {
+    _selectedConfigurationBuilding = value;
+    notifyListeners();
+  }
+
+  bool get canNextPage {
+    switch (currentPage) {
+      case Pages.setupPurposeBuilding:
+        return selectedPurposeBuilding.isNotEmpty;
+      case Pages.setupPeoplePlanning:
+        return peoplePlanningController.text.isNotEmpty;
+      case Pages.setupArea:
+        return xAreaController.text.isNotEmpty &&
+            yAreaController.text.isNotEmpty;
+      case Pages.setupConfigurationBuilding:
+        return selectedConfigurationBuilding.isNotEmpty;
+      case Pages.setupFloor:
+        return selectedFloor.isNotEmpty;
+    }
+  }
+
+  String _selectedPurposeBuilding = '';
+  String _selectedConfigurationBuilding = '';
+  String _selectedFloor = '';
 
   void nextPage() {
     switch (currentPage) {
@@ -73,6 +93,13 @@ class CreateProjectController extends ChangeNotifier {
     notifyListeners();
   }
 
+  void chipRouting(String value) {
+    final index = chips.indexOf(value);
+    currentPage = Pages.values[index];
+    chips.removeRange(index, chips.length);
+    notifyListeners();
+  }
+
   void _addChip(String value) {
     chips.add(value);
 
@@ -103,30 +130,5 @@ class CreateProjectController extends ChangeNotifier {
   void _setupFloors(String value) {
     newProjectModel = newProjectModel.copyWith(floors: value);
     notifyListeners();
-  }
-
-  void chipRouting(String value) {
-    final index = chips.indexOf(value);
-    currentPage = Pages.values[index];
-    chips.removeRange(index, chips.length);
-    notifyListeners();
-  }
-
-  bool get canNextPage {
-    switch (currentPage) {
-      case Pages.setupPurposeBuilding:
-        return selectedPurposeBuilding.isNotEmpty ? true : false;
-      case Pages.setupPeoplePlanning:
-        return peoplePlanningController.text.isNotEmpty ? true : false;
-      case Pages.setupArea:
-        return xAreaController.text.isNotEmpty &&
-                yAreaController.text.isNotEmpty
-            ? true
-            : false;
-      case Pages.setupConfigurationBuilding:
-        return selectedConfigurationBuilding.isNotEmpty ? true : false;
-      case Pages.setupFloor:
-        return selectedFloor.isNotEmpty ? true : false;
-    }
   }
 }

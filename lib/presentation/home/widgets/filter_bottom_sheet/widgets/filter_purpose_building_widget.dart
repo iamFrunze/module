@@ -6,8 +6,6 @@ import 'package:module/presentation/home/widgets/filter_bottom_sheet/filter_drop
 class FilterPurposeBuildingWidget extends StatelessWidget {
   const FilterPurposeBuildingWidget({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     final items = [
@@ -15,7 +13,9 @@ class FilterPurposeBuildingWidget extends StatelessWidget {
       LocaleKeys.purposeBuildingClasses_canteen.tr().toUpperCase(),
       LocaleKeys.purposeBuildingClasses_ITRHostel.tr().toUpperCase(),
       LocaleKeys.purposeBuildingClasses_officeHeadquarters.tr().toUpperCase(),
-      LocaleKeys.purposeBuildingClasses_bathAndLaundryComplex.tr().toUpperCase(),
+      LocaleKeys.purposeBuildingClasses_bathAndLaundryComplex
+          .tr()
+          .toUpperCase(),
       LocaleKeys.purposeBuildingClasses_dormitoryForWorkers.tr().toUpperCase(),
       LocaleKeys.purposeBuildingClasses_other_class.tr().toUpperCase(),
     ];

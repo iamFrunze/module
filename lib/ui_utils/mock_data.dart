@@ -35,7 +35,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,
@@ -52,7 +52,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,
@@ -69,7 +69,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,
@@ -86,7 +86,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,
@@ -103,7 +103,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,
@@ -120,7 +120,7 @@ class MockData {
     personName: 'Константинопольский К',
     homeBlockPropertiesMock: HomeBlockPropertiesMock(
       isSunny: true,
-      builderConfiguration: BuilderConfiguration.BKB,
+      builderConfiguration: BuilderConfiguration.bkb,
       countPeople: 100,
       countFloor: 3,
       xArea: 6,

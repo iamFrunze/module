@@ -41,7 +41,7 @@ class SubtitleBlockWidget extends StatelessWidget {
             const SizedBox(width: 8),
             Text(personName),
           ],
-        )
+        ),
       ],
     );
   }

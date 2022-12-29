@@ -76,30 +76,22 @@ class _GridPurposeWidgetState extends State<_GridPurposeWidget> {
             icon: value.icon,
             description: value.desc,
             isSelected: selectedItem == value.desc,
-            onTap: () => provider.setupSelectedPurposeBuilding = value.desc,
+            onTap: () => provider.selectedPurposeBuilding = value.desc,
           ),
         )
         .toList();
 
     return LayoutBuilder(
       builder: (context, viewPort) {
-        if (AppConfig.checkPlatformType(context) != PlatformType.mobile) {
-          return Center(
-            child: Wrap(
-              spacing: 4,
-              runSpacing: 4,
-              children: list,
-            ),
-          );
-        } else {
-          return ListView.separated(
-            shrinkWrap: true,
-            physics: const ScrollPhysics(),
-            itemBuilder: (context, index) => list[index],
-            separatorBuilder: (_, __) => const SizedBox(height: 4),
-            itemCount: list.length,
-          );
-        }
+        return AppConfig.checkPlatformType(context) != PlatformType.mobile
+            ? Center(child: Wrap(spacing: 4, runSpacing: 4, children: list))
+            : ListView.separated(
+                shrinkWrap: true,
+                physics: const ScrollPhysics(),
+                itemBuilder: (context, index) => list[index],
+                separatorBuilder: (_, __) => const SizedBox(height: 4),
+                itemCount: list.length,
+              );
       },
     );
   }

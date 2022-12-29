@@ -21,7 +21,7 @@ class FloorButtonsWidget extends StatelessWidget {
           (value) => FloorSelectionWidget(
             text: value,
             isSelected: value == selectedItem,
-            onTap: () => provider.setupFloor = value,
+            onTap: () => provider.selectedFloor = value,
           ),
         )
         .toList();

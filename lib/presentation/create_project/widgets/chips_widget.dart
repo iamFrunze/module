@@ -18,7 +18,6 @@ class _ChipsWidgetState extends State<ChipsWidget> {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      direction: Axis.horizontal,
       spacing: 4,
       children: widget.listText
           .map(

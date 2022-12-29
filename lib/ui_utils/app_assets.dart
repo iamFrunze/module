@@ -26,4 +26,6 @@ class AppAssets {
   static const propertySize = '${pathProperties}property_size_icon.svg';
   static const propertyWeatherSunny =
       '${pathProperties}property_weather_sunny_icon.svg';
+  static const propertyWeatherColdly =
+      '${pathProperties}property_weather_coldly_icon.svg';
 }

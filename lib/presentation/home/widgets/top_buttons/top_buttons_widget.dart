@@ -12,7 +12,7 @@ class TopButtonsWidget extends StatelessWidget {
       children: const [
         Expanded(flex: 2, child: NewProjectBtnWidget()),
         SizedBox(width: 16),
-        Expanded(child: FilterBtnWidget())
+        Expanded(child: FilterBtnWidget()),
       ],
     );
   }

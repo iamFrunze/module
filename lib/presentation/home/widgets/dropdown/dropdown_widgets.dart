@@ -15,21 +15,21 @@ class _DropdownWidgetsState extends State<DropdownWidgets> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).backgroundColor,
         border: Border.symmetric(
           horizontal: BorderSide(
             color: Theme.of(context).primaryColor,
-            width: 1,
           ),
         ),
       ),
       child: Row(
         children: [
           Visibility(
-              visible: !isVisibleSearchBar,
-              child: const Expanded(child: DropdownSortButtonWidget())),
+            visible: !isVisibleSearchBar,
+            child: const Expanded(child: DropdownSortButtonWidget()),
+          ),
           IconButton(
             onPressed: () =>
                 setState(() => isVisibleSearchBar = !isVisibleSearchBar),

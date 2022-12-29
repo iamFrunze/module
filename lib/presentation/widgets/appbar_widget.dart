@@ -6,10 +6,10 @@ import 'package:module/ui_utils/app_dimensions/app_dimensions.dart';
 import 'package:module/ui_utils/mock_data.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarWidget({Key? key}) : super(key: key);
-
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  const AppBarWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class _ProfileIconWidget extends StatelessWidget {
       height: AppDimensions.profileIconSize,
       width: AppDimensions.profileIconSize,
       imageBuilder: (context, imageProvider) {
-        return Container(
+        return DecoratedBox(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
